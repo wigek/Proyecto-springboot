@@ -6,6 +6,7 @@ import com.proyecto.personal.demo.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/users")
@@ -18,7 +19,7 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<User> register(@RequestBody UserRegisterRequest request) {
+    public ResponseEntity<User> register(@Valid @RequestBody UserRegisterRequest request) {
         User createdUser = userService.register(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdUser);
     }
