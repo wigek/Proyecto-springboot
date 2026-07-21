@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://pooled.db.prisma.io:5432/postgres?sslmode=require
+    username: a59884942dc81718eeac2e723acf87567f348b17f08a2253160eb6410be12528
+    password: sk_P2hUrDoizl3AQkglOL2og
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  spring:
+    jpa:
+    open-in-view: false
